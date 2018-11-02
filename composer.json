@@ -1,0 +1,11 @@
+{
+    "name": "sonet/webcomm-theme",
+    "description": "Webcomm Base Theme",
+    "authors": [
+        {
+            "name": "Adam Skrzypulec",
+            "email": "adam.s@northwestern.edu"
+        }
+    ],
+    "require": {}
+}
