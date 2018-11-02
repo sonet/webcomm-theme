@@ -1,0 +1,1424 @@
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, u, center, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+
+/* Northwestern University - Mini Site
+Christopher Garcia - 09.10.12 */
+
+body {
+    background: url('http://www.northwestern.edu/common/v7/images/container-bg.jpg') repeat;
+    font: 62.5%/1.8em Verdana, Geneva, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #2e2e2e;
+    min-width: 98%;
+}
+#navigation, #tools, #slideshow, .search, #quick-links, .callout-box, #footer img, ul#footer-links, #left-nav-wrap h1, #left-nav, #logo img, #jump-to-nav, .group-box img {
+    display: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+#container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#tools-mini, #t-tools {
+    text-transform: uppercase;
+    font: 2em "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+    background: #000;
+}
+#tools-mini ul, #t-tools ul {
+    max-width: 1074px;
+    margin: 0 auto;
+    padding: .4em 0 .4em 1em; 
+}
+#tools-mini li, #t-tools li {
+    display: inline;
+    list-style: none;
+    padding: 0 1.5em 0 0;
+    background: url('http://www.northwestern.edu/common/v7/images/slash.png') no-repeat right ;
+}
+#tools li:last-child, #tools-mini li:last-child, #t-tools li:last-child {
+    background: none;
+    padding-right: 0;
+}
+#tools li a, #tools-mini a, #t-tools li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+}
+#tools a:hover, #tools-mini a:hover, #t-tools a:hover {
+    color: #ffae00;
+}
+#header-wrap {
+    padding: 1em 0;
+    background: #4d015c;
+    position: relative;
+}
+#header {
+    max-width: 1074px;
+    margin: 0 auto;
+}
+
+/*** popout navigation ***/
+#navbutton img {
+    display: block;
+    height: 28px;
+    width: 42px;
+}
+#m-navigation {
+    width: 42px;
+    float: left;
+    margin: .6em 2em 0 2em;
+}
+#m-popout {
+    position: absolute;
+    top: 44px;
+    left: 20px;
+    background: url('http://www.northwestern.edu/common/v7/images/mobile-tablet-bg.jpg') repeat-y;
+    font-family: "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+    width: 260px;
+    border: 1px solid #000;
+}
+.m-popout-head {
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: .4em 0 .4em 1em;
+    text-transform: uppercase;
+}
+#m-popout ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#m-popout li {
+    background: #3a0349;
+    font-size: 16px;
+    border-bottom: 1px solid #4e015c;   
+}
+#m-popout li a {
+    padding: .8em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+#m-popout li a.active {
+    color: #f44d17;
+}
+#m-popout li li {
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+#m-popout li li a {
+    text-transform: none;
+    color: #4e015c;
+}
+#m-popout li li li {
+    background: #fff;
+    border: none;
+    font-size: 15px;
+}
+#m-popout li li li a {
+    text-transform: none;
+    color: #2b2b2b;
+    padding: 0 0em .5em 2em;
+}
+#m-popout li li a.active {
+    color: #f44d17;
+    text-decoration: none;
+    background: url('http://www.northwestern.edu/common/v7/images/left-nav-rollover.jpg');
+    margin-bottom: .3em;
+}
+#m-popout li li li a.active, #m-popout li li li li a.active {
+    color: #f44d17;
+    text-decoration: none;
+    background: none;
+    margin-bottom: inherit;
+}
+#m-popout li li li li a {
+    padding-left: 3em;
+}
+#m-popout li li li li a.active {
+    background: transparent;
+    margin-bottom: 0;
+}
+ul.m-popout-links li {
+    font-size: 14px !important;
+}
+
+/*** search ***/
+.m-search {
+    background: #31033e;
+    padding: 5px 10px;
+    border-bottom: 1px solid #000;
+}
+.m-search fieldset {
+    border: none;
+    color: #fff;
+    position: relative;
+}
+.m-search legend, .hide-label {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.m-searchbox { 
+    height: 31px; 
+    width: 235px;
+    background-color: #fff;
+    border: 1px solid #7f7f7f;
+}
+.m-searchbox input { 
+    height: 31px; 
+    width: 170px; 
+    color: #959595;
+    font: 14px "FuturaTW01-DemiOblique", Arial, Helvetica, sans-serif;
+    margin-left: 5px;
+    background: none;
+    border: none;
+    outline: none;
+    float: left; 
+}
+.search-button {
+    float: right !important;
+    width: 35px !important;
+    height: 31px !important;
+}
+#banner {
+    max-width: 1074px;
+}
+#department a, #logo a span {
+    width: 70%;
+    padding-top: .3em;
+    float: left;
+    font: 24px "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+    line-height: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: none !important;
+}
+#department a, #logo a {
+    text-decoration: none;
+}
+#page, #secondary-page { 
+    padding-top: 2em;
+    max-width: 1074px;
+    margin: 0 auto;
+    background: url('http://www.northwestern.edu/common/v7/images/mobile-tablet-bg.jpg') repeat-y;
+    font-size: 10px;
+    padding-bottom: 2em;
+}
+#page-content {
+    max-width: 640px;
+    margin: 0 10px;
+    padding-bottom: 3em;
+}
+#page-content a {
+    color: #4e015c;
+    font-weight: bold;
+    text-decoration: none;
+}
+#page-content h2 a, #page-content h3 a, #page-content h4 a, #page-content h5 a {
+    font-weight: normal;
+}
+#page-content a:hover {
+    text-decoration: underline;
+}
+#page-content h2 a:hover, #page-content h3 a:hover, #page-content h4 a:hover, #page-content h5 a:hover {
+    text-decoration: none;
+}
+#home-left {
+    font-size: 12px;
+}
+#home-right-side {
+    margin-bottom: 2.5-em;
+}
+
+/*** expanding boxes (ugfa) **/
+#expander {
+    max-width: 250px;
+}
+#expander h3 {
+    background: #4e015c;
+    color: #fff;
+    font-size: 18px;
+    padding: .5em;
+    text-transform: uppercase;
+}
+h4.plus {
+    min-height: 1em;
+    padding: .5em .5em .5em 2em;
+    background: url('http://www.northwestern.edu/common/v7/images/plus.png') .3em center no-repeat;
+}
+h4.minus {
+    min-height: 1em;
+    padding: .5em .5em .5em 2em;
+    background: url('http://www.northwestern.edu/common/v7/images/minus.png') .3em center no-repeat;
+}
+h4.plus, h4.minus {
+    border-left: 1px solid #c9c9c9;
+    border-right: 1px solid #c9c9c9;
+    border-bottom: 1px solid #c9c9c9;
+    font: 16px "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin: 0;
+    text-transform: none;
+    cursor: pointer;
+    background-color: #f6f6f6;
+}
+a h4.plus, a h4.minus {
+    color: #4e4e4e; 
+}
+.expanding-box {
+    list-style-type: none;
+    background: #efeff1;
+    margin: 0;
+    padding: 0; 
+    color: #2e2e2e;
+    border-bottom: 1px solid #c9c9c9;
+    font-size: 12px;
+}
+.expanding-box p {
+    padding: 0;
+    margin: 0;
+}
+.expanding-box div {
+    padding: 1em;
+    display: block;
+}
+.expanding-box strong, .expanding-box b {
+    color: #000;
+}
+.showme {
+    max-height: 2000px;
+    overflow: hidden;
+}
+.hideme {
+    max-height: 0;
+    overflow: hidden;
+    border: none !important;
+    margin: 0 !important;
+}
+.hide a {
+    color: #623165;
+    text-decoration: underline;
+}
+
+/*** common stuff ***/
+#page-wrap {
+    width: 1074px;
+    margin: 0 auto;
+    background: url('http://www.northwestern.edu/common/v7/images/page-bg.jpg') repeat-y;
+    -moz-box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888;
+    -webkit-box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888;
+    box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888;    
+}
+#page-micro-wrap {
+    width: 1074px;
+    margin: 0 auto;
+    background: url('http://www.northwestern.edu/common/v7/images/page-nav-option-bg.jpg') repeat-y;
+    -moz-box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888;
+    -webkit-box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888;
+    box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888;    
+}
+#content {
+    font-size: 1.2em;
+}
+.featured-image {
+    width: 30%;
+    float: left;
+}
+.featured-content {
+    float: right;
+    width: 60%;
+}
+    
+/*** grouped items ***/
+.group {
+    margin-bottom: 2.5em;
+}
+.group-box {
+    background: #fff;
+    padding: 10px;
+    -moz-box-shadow: 3px 3px 5px #d5d5d5;
+    -webkit-box-shadow: 3px 3px 5px #d5d5d5;
+    box-shadow: 3px 3px 5px #d5d5d5;
+    margin-bottom: 2em;
+}
+.group-box ul {
+    margin: 0;
+    padding: 0;
+    font-size: .8em;
+    font-size: 16px;
+}
+.group-box ul li {
+    font: 16px "Futura T W01 Medium", Arial, Helvetica, sans-serif;
+}
+.group-box ul li a {
+    font: 16px "Futura T W01 Medium", Arial, Helvetica, sans-serif;
+    font-weight: normal !important;
+}   
+.group-box .grey-group ul.micro-bullet li a {
+    font: .9em "Futura T W01 Medium", Arial, Helvetica, sans-serif;
+}
+.group-box .grey-group ul.micro-bullet li {
+    background-position: 0 8px !important;
+}
+.group li {
+    padding-bottom: .5em;
+}
+.grey-group {
+    background: #ebebeb;
+    padding: 15px;
+    font-size: 1.2em;
+}
+.group ul {
+    list-style-type: none;
+    padding: 0;
+}
+.group ul li:first-child {
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 .5em 0;
+}
+.group ul li {
+    border-bottom: 1px solid #ccc;
+    padding: .7em 0 .5em 0;
+    margin-bottom: .5em;
+}
+.group ul li a {
+    font: 18px "Futura T W01 Medium", Arial, Helvetica, sans-serif;
+    font-weight: normal !important;
+}
+.group ul li a:hover {
+    color: #ffae00 !important;
+    text-decoration: none !important;
+}
+.group img+ul {
+    margin-top: 2em;
+}
+.sidebar-event-listing {
+    float: right;
+    width: 160px;
+}
+.group h3 {
+    margin-bottom: 1em;
+}
+.group span {
+    display: block;
+}
+.event-wrap {
+    margin-bottom: 1em;
+}
+.date {
+    background: #3e0149;
+    color: #fff;
+    width: 60px;
+    height: 28px;
+    font-family: "HelveticaNeueW01-77BdCn 692722", Helvetica, Arial, sans-serif;
+    position: relative;
+    padding: 5px;
+    margin-top: 3px;
+}
+.month {
+    color: #fff;
+    writing-mode: tb-rl;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    filter: flipv fliph;
+    top: 10px;
+    left: 4px;
+    font-size: 12px;
+    font-weight: normal;
+    position: absolute;
+}
+.day {
+    font-size: 24px;
+    float: right;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    padding-left: 5px;
+}
+.month-line {
+    border-right: 1px solid #fff;
+    float: left;
+    width: 20px;
+    height: 28px;
+}
+.event-listing {
+    display: block;
+}
+.event-title a:link {
+    color: #114f61;
+}
+.event-time {
+    color: #822a33;
+    font-weight: bold;
+    font-size: .8em;
+}
+#connect {
+    margin-bottom: 2em;
+}
+ul#connect  {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul#connect li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+	background: none;
+	padding-left: inherit;
+}
+ul#connect li img {
+	display: inline;
+	margin-bottom: 0;
+}
+.mini-column-left, .mini-column-right {
+    margin-bottom: 2em;
+}
+.micro-columns img {
+    margin-bottom: 1.5em;
+}
+.mini-columns img {
+    margin-bottom: 1em;
+}
+
+/*** secondary pages ***/
+#secondary-left {
+    float: left;
+    width: 702px;
+}
+#secondary-right {
+    float: right;
+    width: 240px;
+}
+
+/*** tables ***/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0 1em 0;    
+}
+table th, table thead td {
+    padding: .5em;
+    text-align: left;
+    font-weight: bold;
+}
+table td {
+    padding: 1em;
+    vertical-align: top;
+}
+table.borders, .table-borders {
+    border: 1px solid #979797;
+}
+table.borders th,
+table.borders thead td,
+.table-borders th,
+.table-borders thead td {
+    background-color: #373737;
+    border: 1px solid #979797;  
+    font: 20px "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+table.borders2 th,
+table.borders2 thead td,
+.table-borders2 th,
+.table-borders2 thead td {
+    font-size: 16px;
+}
+table.borders td,
+.table-borders td {
+    padding: .5em;
+    border: 1px solid #979797;
+}
+table.borders tr.stripe td,
+.table-borders tr.stripe td {
+    background: #dedede;
+}
+table.borders tr.over td,
+.table-borders tr.over td {
+    background: #c6c6c6;
+}
+table.table-two-columns td {
+    width: 50%;
+}
+table ul {
+    margin: 0;
+    padding-left: 0 !important;
+}
+
+/*** archive date row ***/
+ul.archives {
+    font: 14px "Futura T W01 Demi", Arial, Helvetica, sans-serif;   
+    list-style-type: none;  
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+ul.archives li {
+    display: inline;
+    border-right: 2px solid #2e2e2e;
+    background: none !important;
+    padding: 0 .6em 0 .6em !important;
+}
+ul.archives li:last-child {
+    border-right: none;
+}
+ul.archives a {
+    font-weight: normal !important;
+}
+ul.archives a.active {
+    color: #000 !important;
+}
+
+/* for news pages */
+.news-group {
+    margin-bottom: 1em;
+}
+.news-date {
+    font-weight: bold;
+}
+#news-stories {
+    border-top: 1px solid #D4D4D4;
+    padding-top: 1.5em;
+}
+#news-stories p {
+    font: 16px "Futura T W01 Demi",Arial,Helvetica,sans-serif;
+    text-transform: none;
+}
+#news-stories a {
+    font-weight: normal;
+}
+
+/*** footer ***/
+#footer-wrap {
+    background: url('http://www.northwestern.edu/common/v7/images/footer-bg.jpg') repeat;
+    font: 12px "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+#footer {
+    max-width: 1074px;
+    margin: 0 auto;
+    padding: 2em 1em 1em 1em;
+}
+#footer-contact {
+    display: inline;
+    margin: 2em 0 0 0;
+    padding: 0;
+}
+#footer-contact li {
+    list-style-type: none;
+    
+}
+#footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+}
+#footer a:hover {
+    text-decoration: underline;
+}
+
+/*** misc ***/
+h2 {
+    font: 20px "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: .7em;
+    background: #4e015c;
+    padding: .5em .6em .4em .6em;
+}
+h2.group-h2 {
+    font: 18px "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    background: #4e015c;
+    padding: .5em .8em .4em .8em;
+    margin-bottom: 0;
+}
+h2.home{
+    background: none;
+    padding: 0;
+    color: #474747;
+}
+h2.emergency {
+    background: #e20000;
+}
+h3 {
+    font: 20px "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+    color: #474747;
+}
+h3.home, #home-right-side h3 {
+    font: 16px "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+    color: #4e015c;
+    margin: 1em 0 0 0;
+}
+h3.home-micro {
+    font: 16px "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+    color: #4e015c;
+    margin: 1em 0 0 0;
+    text-transform: uppercase;
+}
+h3.home a:link, #home-right-side h3 a:link {
+    font-weight: normal !important;
+}
+h4 {
+    font: 18px "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+    color: #474747;
+}
+h5 {
+    font: 16px "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+    color: #474747;
+    text-transform: uppercase;
+}
+h6 {
+    font: 16px "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+    color: #4e015c;
+}
+h2+p, h3+p, h4+p, h5+p, h6+p {
+    margin-top: .2em;
+}
+h3.home+p {
+    margin-top: 0;
+}
+hr {
+    background: #d4d4d4;
+    height: 1px;
+    border: none;
+    margin: 1em 0;
+}
+#content ul {
+    padding-left: 1.5em;
+}
+.group-box ul li, #content ul li {
+    padding-left: 1em;
+    list-style-type: none;
+    background: url('http://www.northwestern.edu/common/v7/images/yellow-bullet.png') no-repeat 0 6px;
+}
+#content ul li ul li {
+    background: none;
+    list-style-type: disc;
+    padding-left: 0;
+}
+.responsive-container {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+}
+.responsive-container iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.frame,
+.image-frame, 
+#content img[src$=".jpg"],
+#content img[src$=".JPG"],
+#page-content img[src$=".jpg"],
+#page-content img[src$=".JPG"] {
+    background: #fff;
+    padding: 6px;
+    -moz-box-shadow: 3px 3px 5px #d5d5d5;
+    -webkit-box-shadow: 3px 3px 5px #d5d5d5;
+    box-shadow: 3px 3px 5px #d5d5d5;
+}
+body #content .noFrame,
+body #content .noFrame img,
+body #page-content .noFrame,
+body #page-content .noFrame img,
+body #content .no-image-frame,
+body #content .no-image-frame img,
+body #page-content .no-image-frame,
+body #page-content .no-image-frame img {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 0;
+    background: none;
+}
+#content img.big-frame,
+#page-content img.big-frame {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #d3d3d3;
+}
+img.small-frame {
+    border: 1px solid #D3D3D3;
+}
+button, #content a.button {
+    margin: 1em 0 0 0;
+    padding: .6em 1em;
+    background: #fff;
+    border: 1px solid #c9c9c9;
+    font: 12px Verdana, Geneva, sans-serif;
+    font-weight: bold;
+    color: #7f7f7f;
+    -moz-box-shadow: 3px 3px 5px #d5d5d5;
+    -webkit-box-shadow: 3px 3px 5px #d5d5d5;
+    box-shadow: 3px 3px 5px #d5d5d5;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+button:hover, #content a.button:hover {
+    -moz-box-shadow: 3px 3px 5px #888;
+    -webkit-box-shadow: 3px 3px 5px #888;
+    box-shadow: 3px 3px 5px #888;   
+}
+button img, #content a.button img {
+    position: absolute;
+    top: 4px; 
+    left: 5px;
+}
+button span, #content a.button span { /* for icon in button */
+    margin-left: 25px;
+}
+#page-content a:link, #page-content a:hover, button:hover, .top-nav li a:hover {
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+.video {
+    height: 0;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    position: relative;
+}
+.floatLeft, .align-image-left {
+    float: left;
+    margin: 0 2em .5em 0;
+}
+.floatRight, .align-image-right {
+    float: right;
+    margin: 0 0 .5em 2em;
+}
+.show-hide {
+    display:none;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+* html .clearfix {
+    zoom: 1;
+}
+*:first-child+html .clearfix {
+    zoom: 1;
+}
+.video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin-bottom: 1.25em;
+}
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media screen and (min-width:640px) {
+
+    #navigation-wrap, #logo img, #left-nav-wrap h1 {
+        display: none;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /*** home page and common ***/
+    #page-content {
+        max-width: 725px;
+        margin: 0 2em 3em 2em;
+    }
+    #slideshow {
+        display: block;
+        height: auto;
+        margin-bottom: 2em;
+    }
+    #slideshow img {
+        max-width: 95%;
+        margin: 0 auto;
+        display: block;
+    }
+    #home-left {
+        float: left;
+        width: 60%;
+    }
+    #sidebar {
+        float: right;
+        width: 35%;
+        font-size: 12px;
+    }
+    .date {
+        float: left;
+    }
+    .event-listing {
+        margin-left: 1em;   
+        float: left;
+        width: 80%;
+    }   
+    table th, table thead, table.borders th, table.borders thead {
+        /* white-space: nowrap; */
+    }
+    .callout-box {
+        display: block;
+    }
+    .micro-columns img {
+        margin-bottom: 1.5em;
+    }
+    .micro-column-left {
+        float: left;
+        width: 47%;
+    }
+    .micro-column-right {
+        float: right;
+        width: 47%
+    }
+
+    /*** left navigation ***/
+    #left-nav-wrap {
+        margin-top: 3em;
+    }  
+    ul#left-nav, ul#left-nav li ul {
+        list-style-type: none;
+        margin: 0 0 3em 0;
+        padding: 0;
+    }
+    ul#left-nav li:first-child {
+        border-top: 1px solid #ccc;
+    }
+    ul#left-nav li {
+        border-bottom: 1px solid #ccc;
+        font: 20px "Futura T W01 Medium", Arial, Helvetica, sans-serif;     
+    }
+    ul#left-nav li a {
+        font-weight: normal;
+        display: block;
+        padding: .4em .5em;
+    }
+    ul#left-nav li a:hover, ul#left-nav li a.active {
+        color: #f44d17;
+        text-decoration: none;
+        background: url('http://www.northwestern.edu/common/v7/images/left-nav-rollover.jpg');
+    }   
+    ul#left-nav li ul {
+        margin-bottom: 0;
+    }
+    ul#left-nav li li {
+        background: #fff;
+        border: none;
+        font-size: 18px;
+    }
+    ul#left-nav li li li {
+        font-size: 16px;
+    }
+    ul#left-nav li ul li:hover {
+        background: #fff;
+    }
+    ul#left-nav ul li a {
+        color: #000;
+        padding-left: 1em;
+    }
+    ul#left-nav li li a:hover, ul#left-nav li li a.active {
+        color: #f44d17;
+        text-decoration: none;
+        background: transparent;
+    }
+    ul#left-nav ul li:first-child {
+        border-top: none ;
+    }
+    ul#left-nav ul ul {
+        margin-left: 1em;
+    }
+    
+    /*** footer ***/
+    #footer-wrap {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:800px) {
+    #t-tools, #m-navigation, #logo span, #jump-to-nav {
+        display: none;
+    }
+    #body {
+        min-width: 1074px;
+    }
+    #header-wrap, #header {
+        padding: 0 0;
+        min-height: 154px;
+    }
+    #logo {
+        width: 231px;
+        float: left;
+    }
+    #logo img {
+        display: block;
+    }
+    #department a, #logo a span {
+        width: 50%;
+        font-size: 36px;
+        margin-left: 1em;
+        padding: 1em 0;
+    }
+    #tools {
+        display: block;
+        text-transform: uppercase;
+        text-align: right;
+        font: 1.2em "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+        background: #000;
+        padding-bottom: 1em;
+    }
+    #tools ul {
+        max-width: 1074px;
+        margin: 0 auto;
+        padding: 1.1em 1em 0 0; 
+    }
+    #tools li {
+        display: inline;
+        list-style: none;
+        padding: 0 3em 0 1em;
+        background: url('http://www.northwestern.edu/common/v7/images/slash.png') no-repeat right ;
+    }   
+    #header {
+        margin: 0 auto;
+        background: #4d015c;
+    }
+    
+    /*** quick links ***/
+    #quick-links {
+        text-transform: uppercase;
+        width: 20%;
+        float: right;
+        display: block;
+        margin-top: 1.8em   
+    }
+    .mini-quick-links {
+         width: 40% !important;
+         margin-top: 1em !important;
+    }
+    #quick-links ul {
+        padding: 0 1em 0 0;
+        margin: 0;
+        list-style-type: none;
+        border-right: 1px solid #a066ab;    
+    }
+    .mini-quick-links ul {
+        border-right: none !important;
+        float: right !important;
+        text-align: right;
+    }
+    #quick-links li {
+        text-align: right;
+        font: 1.2em "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+        padding: .2em 0;
+    }
+    .mini-quick-links li {
+        padding: 0 .5em 0 .3em !important;
+        display: inline;
+        border-right: 1px solid #fff;
+        margin: .2em 0;
+    }
+    .mini-quick-links li:last-child {
+        border-right: none;
+        padding-right: 0;
+    }   
+    #quick-links li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: normal;
+    }
+    #quick-links li a:hover {
+        color: #ffae00;
+    }
+    
+    /*** search ***/
+    .search {
+        width: 250px;
+        float: right;
+        margin: 6em 0 0 2em;
+        display: block;
+    }
+    .search fieldset {
+        border: none;
+        color: #fff;
+        position: relative;
+    }
+    .search legend, .hide-label {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+    .searchbox { 
+        height: 31px; 
+        width: 220px;
+        background-color: #fff;
+        border: 1px solid #7f7f7f;
+    }
+    .searchbox input { 
+        height: 31px; 
+        width: 160px; 
+        color: #959595;
+        font: 14px "FuturaTW01-DemiOblique", Arial, Helvetica, sans-serif;
+        margin-left: 5px;
+        background: none;
+        border: none;
+        outline: none;
+        float: left; 
+    }
+    
+    /*** home page and common ***/
+    #navigation-wrap {
+        display: block;
+        background: #31043f;
+        width: 100%;
+        min-height: 46px;   
+    }
+    .top-nav {
+        list-style:none;
+        margin: 0;
+        padding: 0;
+        z-index: 5;
+        min-height: 46px;
+    }
+    .top-nav li {
+        float: left;
+        position: relative;
+        font: 1.8em "Futura T W01 Demi", Arial, Helvetica, sans-serif; 
+        text-transform: uppercase;
+    }
+    .top-nav li:first-child a {
+        border-left: 1px solid #5b3b64; 
+    }
+    .top-nav a {
+        display: block;
+        text-align: center;
+        color: #fff;
+        border-right: 1px solid #5b3b64; 
+        min-height: 34px;
+        padding: 12px 1.5em 0 1.5em;
+        text-decoration: none;
+    }
+    .top-nav a.active {
+        color: #ffae00;
+    }   
+    .top-nav a:hover {
+        color: #ffae00;
+        background: #684871;
+        min-height: 34px;
+    }
+    .top-nav li:hover ul { 
+        left: 0; 
+    }
+    .top-nav ul {
+        min-width: 133px;
+        position: absolute;
+        list-style-type: none;
+        padding: 1.1em 1em 0 1em;
+        margin: 0;
+        background: url('http://www.northwestern.edu/common/v7/images/expanded-nav.jpg') repeat;
+        border-top: 1px solid #717070;
+        left: -9999px;
+        z-index: 1000;
+    }
+    .top-nav ul li {
+        font-size: 13px;
+        float: none;    
+    }
+    .top-nav ul li a { 
+        height: auto !important;
+        border: none !important;
+        padding: 3px;
+        white-space: nowrap;
+        text-align: left;
+    }
+    .top-nav ul li a:hover {
+        color: #ffae00;
+        background: transparent;
+    }
+    #navigation {
+        max-width: 1074px;
+        margin: 0 auto;
+        position: relative;
+        display: block; 
+    }
+    #micro-top-nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        min-height: 46px;
+        width: 100%;
+    }
+    #micro-top-nav li {
+        float: left; 
+        text-transform: uppercase;
+        font: 1.8em "Futura T W01 Demi", Arial, Helvetica, sans-serif;  
+        min-width: 16.66666%;
+    }
+    #micro-top-nav li a {
+        display: block;
+        text-decoration: none;
+        font-weight: normal;
+        text-align: center;
+        color: #fff;
+        border-right: 1px solid #5b3b64; 
+        padding-top: 12px;
+        min-height: 34px;
+    }
+    #micro-top-nav li:first-child a {
+        border-left: 1px solid #5b3b64; 
+    }
+    #micro-top-nav > li a:hover {
+        color: #ffae00;
+        background: #684871;
+        min-height: 34px;
+    }
+    #micro-top-nav li a.active {
+        color: #ffae00;
+    }   
+    #page { 
+        -moz-box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888;
+        -webkit-box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888;
+        box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888;        
+    }
+    #secondary-page {
+        -moz-box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888;
+        -webkit-box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888;
+        box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888;        
+    }
+    #page-content {
+        max-width: 1029px;
+        margin: 1em auto 3em auto;
+    }
+    #home-left {
+        width: 65.11175%;
+        margin-left: 1.7em;
+    }
+    #slideshow img {
+        margin: 0;
+        display: block;
+    }
+    #home-left-side {
+        float: left;
+        width: 46%;
+    }
+    #home-right-side {
+        float: right;
+        width: 46%;
+    }
+    #sidebar {
+        width: 25.26724%;
+        margin-right: 1em;
+    }
+    .mini-column-left {
+        float: left;
+        width: 47%;
+    }
+    .mini-column-right {
+        float: right;
+        width: 47%
+    }   
+    .callout-box {
+        display: block;
+        background: #fff;
+        padding: 10px;
+        -moz-box-shadow: 3px 3px 5px #d5d5d5;
+        -webkit-box-shadow: 3px 3px 5px #d5d5d5;
+        box-shadow: 3px 3px 5px #d5d5d5;
+        margin-bottom: 2em;
+        width: 175px;
+        float: right;
+        margin: 0 0 2em 2em;
+        font-size: .8em;
+        line-height: 1.4em;
+    }
+    .callout-box img {
+        margin-bottom: 1em;
+    } 
+    .callout-box ul {
+        padding-left: 0;
+    }
+    .callout-box ul li {
+        background-position: 0 4px !important;
+    }
+
+    /*** secondary pages ***/
+    #content {
+        float: right;
+        width: 64.04275%;
+        margin-right: 1.6em;
+    }
+    .group-box img {
+        display: block;
+        margin-bottom: 1em;
+    }
+    
+    /*** left nav ***/
+    #left-nav-wrap {
+        float: left;
+        width: 26.72497%;
+        margin-top: 0;
+    }
+    #left-nav-wrap h1 {
+        font: 30px "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+        text-transform: none;
+        color: #4e015c;
+        margin-bottom: .5em;
+        margin-left: .3em;
+        background: none;
+        padding: 0;
+        display: block;
+    }
+    #left-nav-wrap h1 a {
+        font-weight: inherit;
+        text-decoration: none !important;
+    }
+    #left-nav {
+        display: block;
+    }
+            
+    /*** footer ***/
+    #footer-wrap {
+        font-size: 16px;
+    }
+    #footer img {
+        display: block;
+        float: left;
+        margin-right: 2em;
+    }   
+    #footer ul {
+        display: block;
+        margin: .5em 0 0 0;
+        padding: 0;
+    }
+    #footer-links li {
+        display: inline;
+        border-right: 2px solid #fff;
+        margin-right: .5em;
+        padding-right: .7em;
+    }
+    #footer-contact li {
+        display: inline;
+        margin-left: 0;
+        padding-right: .5em;
+        border-right: none !important;
+    }
+    #footer ul li:last-child {
+        border-right: none;
+    }
+}
+
+@media screen and (max-width:940px) {
+    #micro-top-nav li {
+        font-size: 1.6em;
+        min-width: 15.5%;
+    }
+}
+
+@media screen and (min-width:1040px) {
+/*** .mini-quick-links and #department a goes in ugfa specific stylesheet only ***/
+    .mini-quick-links {
+        width: 20% !important;
+        margin-top: 5em !important; 
+    }
+    .mini-quick-links ul {
+        border-right: 1px solid #a066ab !important;
+        float: none !important; 
+    }
+    .mini-quick-links li {
+        font: 1.2em "Futura T W01 Demi", Arial, Helvetica, sans-serif;
+        padding: .2em 0;
+        display: inherit;
+        border-right: none;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    #page { 
+        background: url('http://www.northwestern.edu/common/v7/images/desktop-home-bg.jpg') repeat-y;   
+    }   
+    #secondary-page {
+        background: url('http://www.northwestern.edu/common/v7/images/desktop-secondary-bg.jpg') repeat-y;
+    }
+    #slideshow img {
+        max-width: 100%;
+    }
+}
+
+/*** mini-specific css: add pixel width on #department a for @media (800px) and top-margin ems on .mini-quick-links for @media (1040px) if necessary ***/
+
+/* File Link Icons */
+
+#page-content a[href$=".pdf"],
+#page-content a[href$=".PDF"],
+#page-content a.pdf {
+    padding-right: 20px;
+    background: url(../images/icons/pdf-icon.png) no-repeat right center;
+}
+#page-content a[href$=".doc"],
+#page-content a[href$=".DOC"],
+#page-content a[href$=".docx"],
+#page-content a[href$=".DOCX"],
+#page-content a.doc {
+    padding-right: 20px;
+    background: url(../images/icons/doc-icon.png) no-repeat right center;
+}
+#page-content a[href$=".xls"],
+#page-content a[href$=".XLS"],
+#page-content a[href$=".xlsx"],
+#page-content a[href$=".XLSX"],
+#page-content a.xls {
+    padding-right: 20px;
+    background: url(../images/icons/xls-icon.png) no-repeat right center;
+}
+#page-content a[href$=".gz"],
+#page-content a[href$=".GZ"],
+#page-content a[href$=".gzip"],
+#page-content a[href$=".GZIP"],
+#page-content a[href$=".zip"],
+#page-content a[href$=".ZIP"],
+#page-content a.archive {
+    padding-right: 20px;
+    background: url(../images/icons/zip-icon.png) no-repeat right center;
+}
+#page-content a[href$=".ppt"],
+#page-content a[href$=".PPT"],
+#page-content a[href$=".pptx"],
+#page-content a[href$=".PPTX"],
+#page-content a.ppt {
+    padding-right: 20px;
+    background: url(../images/icons/ppt-icon.png) no-repeat right center;
+}
+#left-nav a {
+    background-image: none !important;
+}

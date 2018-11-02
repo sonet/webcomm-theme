@@ -1,0 +1,38 @@
+.cms .ss-gridfield .grid-csv-button,
+.cms .ss-gridfield .grid-print-button,
+.cms-logo a {
+	display: none;
+}
+
+.cms-logo span {
+	text-transform: uppercase;
+}
+
+.cms-logo-header {
+	background-image: -moz-linear-gradient(#4E015C, #24002b);
+	background-image: linear-gradient(#4E015C, #24002b);
+}
+
+.cms-logo-header span a {
+	color: #55A4D2; /* F5C730 */
+}
+
+.cms-logo {
+	border-bottom: 1px solid #24002b;
+}
+
+.cms-login-status {
+	border-top: 1px solid #4E015C;
+}
+
+.htmleditor .middleColumn {
+	margin-left: 184px;
+	float: left;
+}
+
+#Photo.ss-uploadfield .middleColumn {
+	width: auto;
+	clear: inherit;
+	max-width: 511px;
+	float: left;
+}

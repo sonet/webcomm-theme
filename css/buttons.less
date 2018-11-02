@@ -1,0 +1,124 @@
+.proto-button, input.action, input[type=file] {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	line-height: normal;
+	white-space: nowrap;
+	vertical-align: baseline;
+	text-align: center;
+	cursor: pointer;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+.proto-button::-moz-focus-inner,
+input.action::-moz-focus-inner,
+input[type=file]::-moz-focus-inner{
+	padding: 0;
+	border: 0
+}
+
+.proto-button,
+input.action,
+input[type=file] {
+	font-size: 100%;
+	*font-size: 90%;
+	*overflow: visible;
+	padding: .5em 1.5em;
+	color: #444;
+	color: rgba(0, 0, 0, .8);
+	*color: #444;
+	border: 1px solid #999;
+	border: 0 rgba(0, 0, 0, 0);
+	background-color: #E6E6E6;
+	text-decoration: none;
+	border-radius: 2px;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transition: .1s linear -webkit-box-shadow;
+	-moz-transition: .1s linear -moz-box-shadow;
+	-ms-transition: .1s linear box-shadow;
+	-o-transition: .1s linear box-shadow;
+	transition: .1s linear box-shadow
+}
+
+.proto-button-hover,
+.proto-button:hover,
+.proto-button:focus,
+input.action-hover,
+input.action:hover,
+input.action:focus,
+input[type=file]:hover,
+input[type=file]:focus
+{
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0, 0, 0, .05)), to(rgba(0, 0, 0, .1)));
+	background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .1));
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, .05) 0, rgba(0, 0, 0, .1));
+	background-image: -ms-linear-gradient(transparent, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .1));
+	background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .1));
+	background-image: linear-gradient(transparent, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .1))
+}
+
+.proto-button:focus,
+input.action:focus,
+input[type=file]:focus {
+	outline: 0
+}
+
+.proto-button-active,
+.proto-button:active,
+input.action-active,
+input.action:active,
+input[type=file]:active {
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, .15) inset, 0 0 6px rgba(0, 0, 0, .2) inset
+}
+
+.proto-button[disabled],
+.proto-button-disabled,
+.proto-button-disabled:hover,
+.proto-button-disabled:focus,
+.proto-button-disabled:active,
+input.action[disabled],
+input.action-disabled,
+input.action-disabled:hover,
+input.action-disabled:focus,
+input.action-disabled:active {
+	border: 0;
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	filter: alpha(opacity=40);
+	-khtml-opacity: .4;
+	-moz-opacity: .4;
+	opacity: .4;
+	cursor: not-allowed;
+	box-shadow: none
+}
+
+.proto-button-hidden,
+input.action-hidden {
+	display: none
+}
+
+.proto-button::-moz-focus-inner,
+input.action::-moz-focus-inner,
+input[type=file]::-moz-focus-inner {
+	padding: 0;
+	border: 0
+}
+
+.proto-button-primary,
+.proto-button-selected,
+a.proto-button-primary,
+a.proto-button-selected,
+input.action-primary,
+input.action-selected,
+input.action-primary,
+input.action-selected,
+input.action {
+	background-color: @button-bg-color;
+	color: @button-font-color;
+	font-weight: 600;
+}
